@@ -1,14 +1,13 @@
-$color-a: #f44336;
-$color-b: #2196F3;
-$color-c: #8BC34A;
+$color-a: #0000ff;
+$color-b: #ff0000;
 $color-black: #000;
 $color-white: #fff;
 $color-gray: #d6d6d6;
 $color-gray-2: #333;
 $color-gray-3: #1d1d1d;
 
-$thermometer-bg-color: linear-gradient($color-b, $color-c, $color-a);
-$thermometer-mercury-bg-color: linear-gradient(0deg, $color-a, $color-b);
+$thermometer-bg-color: linear-gradient($color-b, $color-a);
+$thermometer-mercury-bg-color: linear-gradient(0deg, $color-b, $color-b);
 $thermometer-statistic-li-light-before: linear-gradient(90deg, rgba($color-black, .2), transparent);
 $thermometer-statistic-li-dark-before: linear-gradient(90deg, rgba($color-white, .2), transparent);
 $thermometer-w: 100px;
