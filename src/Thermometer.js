@@ -4,15 +4,15 @@ import './style.scss';
 
 const getFormattedLabel = ({label, insertAfter}, val) => insertAfter ? val + label : label + val;
 
-const getIntervals = (format, max, steps) => {
+const getIntervals = (format, min, max, steps) => {
 	let intervals = [];
 
 	for (let step = 0; step <= steps; step++) {
-		const val = Math.abs(((max / steps) * step).toFixed(2));
-		const percent = (val / max) * 100;
+		const val = Math.abs((((max)/ steps) * step).toFixed(2));
+		const percent = (val / (max)) * 100;
 		const interval = {
 			percent,
-			label: getFormattedLabel(format, val)
+			label: getFormattedLabel(format, Math.abs((((max - min)/ steps) * step).toFixed(2)) + min)
 		};
 		
 		intervals.push(interval);
@@ -21,8 +21,8 @@ const getIntervals = (format, max, steps) => {
 	return intervals;
 }
 
-const Thermometer = ({format, height, max, size, steps, theme, value}) => {
-	const intervals = getIntervals(format, max, steps);
+const Thermometer = ({format, height, min, max, size, steps, theme, value}) => {
+	const intervals = getIntervals(format, min, max, steps);
 	const percent = value / max * 100;
 	const valstr = getFormattedLabel(format, value);
 
