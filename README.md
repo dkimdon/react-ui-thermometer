@@ -15,7 +15,7 @@ This is component has created with create-react-app
 <h3>Usage</h3>
 
 ```javascript
-<Thermometer theme={'light'} value={80} max={200} format={'$'} steps={3} size={'small'} height={180} />
+<Thermometer theme={'light'} value={80} max={200} format={{label:'$', insertAfter: true}} steps={3} size={'small'} height={180} />
 ```
 
 <h3>Documentation</h3>
